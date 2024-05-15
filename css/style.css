@@ -222,7 +222,6 @@ button.btn-close {
 }
 
 .title-page {
-    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -231,7 +230,7 @@ button.btn-close {
 }
 
 .store-img-block {
-    position: relative;
+    width: 40%;
 }
 
 
@@ -244,8 +243,7 @@ button.btn-close {
 }
 
 .subtitle-block {
-    margin-bottom: 50px;
-    text-align: center;
+    margin-bottom: 30px;
     font-weight: bold;
 }
 
@@ -267,12 +265,12 @@ button.btn-close {
 }
 
 .advantages-item {
-    width: 31%;
-    text-align: center;
+    display: flex;
 }
 
 .advantages-item i {
     transition: all .3s linear;
+    color: #e08b52;
 }
 
 .advantages-item:hover i {
@@ -280,14 +278,29 @@ button.btn-close {
 }
 
 .advantages-icon {
-    border: 3px solid #fff;
-    border-radius: 50%;
-    display: inline-block;
     font-size: 40px;
-    padding: 20px;
-    width: 104px;
-    height: 104px;
-    margin-bottom: 30px;
+    width: 80px;
+    height: 90px;
+}
+
+.advantages-adress .advantages-icon {
+    width: 100px;
+}
+
+.advantages-item-text {
+    width: 90%;
+}
+
+.photo-block .advantages-item {
+    width: 32%;
+}
+
+.photo-block {
+    margin-bottom: 50px;
+}
+
+.main-block-info {
+    width: 55%;
 }
 
 .main-button {
@@ -341,6 +354,20 @@ button.btn-close {
     margin-top: 50px;
 }
 
+.main-banner-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-links {
+    display: flex;
+}
+
+.footer-links a {
+    margin-right: 20px;
+}
+
 @media (min-width: 768px) {
     .navbar-expand-md .navbar-collapse {
         justify-content: space-around;
@@ -353,6 +380,14 @@ button.btn-close {
 
     .store-photo-mobile {
         display: none;
+    }
+}
+
+@media(max-width: 1199px) {
+
+    .store-img-block,
+    .main-block-info {
+        width: 49%;
     }
 }
 
@@ -382,6 +417,16 @@ button.btn-close {
 
     .advantages-adress .advantages-item {
         width: 48%;
+    }
+
+    .store-img-block,
+    .main-block-info {
+        width: 100%;
+    }
+
+    .main-banner-flex {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
     }
 }
 
@@ -416,9 +461,14 @@ button.btn-close {
     }
 
     .advantages-item,
-    .advantages-adress .advantages-item {
+    .advantages-adress .advantages-item,
+    .photo-block .advantages-item {
         width: 100%;
         margin-bottom: 20px;
+    }
+
+    .footer-links {
+        flex-direction: column;
     }
 }
 
